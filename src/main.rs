@@ -1,12 +1,9 @@
+#![warn(clippy::all, clippy::pedantic)]
 mod editor;
-
-use std::io::{self, Read, stdin, stdout};       
-use termion::raw::IntoRawMode;     
-use termion::event::Key;
-use termion::input::TermRead;
+mod terminal;
 use editor::Editor;
+pub use terminal::Terminal;
 
 fn main() {
-    let editor = Editor::default();
-    editor.run();
+    Editor::default().run();
 }
