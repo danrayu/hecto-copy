@@ -1,4 +1,5 @@
 #![warn(clippy::all, clippy::pedantic)]
+mod document;
 mod editor;
 mod terminal;
 use editor::Editor;
